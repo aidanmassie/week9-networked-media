@@ -1,0 +1,48 @@
+<html>
+    <head>
+            <title>Reducing Plastic Bottle Use</title>
+            <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
+            <script src="p5.js"></script>
+            <script src="p5.sound.min.js"></script>
+            <style>
+                    body {
+                      background-color: #dcc6b0;
+                      font-size: 32px;
+                      font-family: 'Patua One', cursive;
+                      text-align: center;
+                      margin-top: 300px;
+                    }
+
+                    form {
+                        text-align: center;
+                        display: inline;
+                    }
+
+                    .p{
+                      background-color: #dcc6b0;
+                      font-size: 32px;
+                      font-family: 'Patua One', cursive;
+                      text-align: center;
+                      margin-top: 200px;
+                    }
+                  </style>
+
+    </head>
+
+    <body>
+      <script src="sketch.js"></script>
+        <p>Select below your estimated daily water intake!</p>
+      <form method="POST" action="/timeline">
+        Select: <select name="number">
+            <option value="12">12 ounces; 0.35 liters; 354 milliliters</option>
+            <option value="18">18 ounces; 0.53 liters; 532 milliliters</option>
+            <option value="24">24 ounces; 0.71 liters; 709 milliliters</option>
+            <option value="32">32 ounces; 0.95 liters; 946 milliliters</option>
+            <option value="40">40 ounces; 1.18 liters; 1,182 milliliters</option>
+            <option value="48">48 ounces; 1.42 liters; 1,419 milliliters</option>
+            <option value="64">64 ounces; 1.89 liters; 1,892 milliliters</option>
+          </select><br />
+          <input type="submit" value="Submit">
+      </form>
+    </body>
+</html>
