@@ -37,7 +37,7 @@ app.post('/timeline', function (req, res) {
 console.log(realTotal);
 console.log(height);
   var passingData = { number: realTotal, height: height};
-res.render("timeline.ejs", passingData);
+  res.render("timeline.ejs", passingData);
 
 
  
@@ -52,6 +52,34 @@ function sum(){
   return total;
 
 }
+
+app.get('/timelinedata', function(req,res){
+  var number = 12;
+    // console.log(number);
+
+    numberDatabase.push(number);
+    var realTotal = sum();
+    
+// loop through the data here
+// and send the total to the ejs
+
+  var height;
+
+  if (realTotal > 2048){
+    height = "100%";
+  }
+  else{
+    height = realTotal/2048 * 100 + "%";
+  }
+console.log(realTotal);
+console.log(height);
+  var passingData = { number: realTotal, height: height};
+res.send(passingData);
+
+
+ 
+
+});
 
 
 
